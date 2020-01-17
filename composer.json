@@ -1,0 +1,16 @@
+{
+    "name": "ycs77/wei-chatbot",
+    "description": "聊天機器人小薇",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Yang",
+            "email": "yangchenshin77@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^4.1",
+        "linecorp/line-bot-sdk": "^4.1"
+    }
+}
