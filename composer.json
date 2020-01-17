@@ -12,5 +12,13 @@
     "require": {
         "vlucas/phpdotenv": "^4.1",
         "linecorp/line-bot-sdk": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        },
+        "files": [
+            "bootstrap/helpers.php"
+        ]
     }
 }
