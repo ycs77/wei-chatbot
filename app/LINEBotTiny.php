@@ -53,6 +53,7 @@ if (!function_exists('hash_equals')) {
         for ($i = 0; $i < $length; $i++) {
             $diff |= ord($knownString[$i]) ^ ord($userString[$i]);
         }
+
         return $diff === 0;
     }
 }
@@ -108,6 +109,7 @@ class LINEBotTiny
         ]);
 
         $response = file_get_contents('https://api.line.me/v2/bot/message/reply', false, $context);
+
         if (strpos($http_response_header[0], '200') === false) {
             throw new LineRequestFailException('Request failed: ' . $response);
         }
@@ -117,6 +119,7 @@ class LINEBotTiny
     {
         $hash = hash_hmac('sha256', $body, $this->channelSecret, true);
         $signature = base64_encode($hash);
+
         return $signature;
     }
 }

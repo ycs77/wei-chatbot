@@ -1,9 +1,8 @@
 <?php
 
-use App\App;
+use App\Controller;
 
 require_once __DIR__ . '/../bootstrap/app.php';
 
-$app = new App();
-
-echo $app->index();
+$controller = new Controller();
+echo $controller->index();

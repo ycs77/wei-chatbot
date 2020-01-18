@@ -2,10 +2,11 @@
 
 namespace App;
 
+use App\Ai\Itpk;
 use App\Datas\Joke;
 use App\LINEBotTiny;
 
-class App
+class Controller
 {
     public function index()
     {
@@ -64,7 +65,7 @@ class App
         $itpkApiKey = env('ITPK_API_KEY');
         $itpkApiSecret = env('ITPK_API_SECRET');
 
-        $itpkBot = new ItpkBot($itpkApiKey, $itpkApiSecret);
+        $itpkBot = new Itpk($itpkApiKey, $itpkApiSecret);
 
         return $itpkBot->reply($message);
     }
