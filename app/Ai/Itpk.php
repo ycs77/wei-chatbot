@@ -25,7 +25,7 @@ class Itpk
             'api_key' => $this->apiKey,
             'api_secret' => $this->apiSecret,
         ]);
-        $answer = file_get_contents('https://i.itpk.cn/api.php?' . $query);
+        $answer = file_get_contents('http://i.itpk.cn/api.php?' . $query);
 
         $answer = zh_s_to_t($answer);
         $answer = $this->filter($answer);
